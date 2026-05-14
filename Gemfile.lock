@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    config_for-data_model (0.1.0)
-      rails (>= 6.1)
+    data_for (0.1.0)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
 
 GEM
   remote: https://rubygems.org/
@@ -113,7 +114,8 @@ GEM
       net-smtp
     marcel (1.1.0)
     mini_mime (1.1.5)
-    minitest (5.26.0)
+    mini_portile2 (2.8.9)
+    minitest (5.27.0)
     net-imap (0.5.12)
       date
       net-protocol
@@ -124,6 +126,9 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
+    nokogiri (1.18.10)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.18.10-arm64-darwin)
       racc (~> 1.4)
     parallel (1.27.0)
@@ -133,7 +138,7 @@ GEM
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.4.0)
+    prism (1.9.0)
     psych (5.2.6)
       date
       stringio
@@ -217,6 +222,8 @@ GEM
       rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
     securerandom (0.4.1)
+    sqlite3 (2.7.3)
+      mini_portile2 (~> 2.8.0)
     sqlite3 (2.7.3-arm64-darwin)
     stringio (3.1.7)
     thor (1.4.0)
@@ -226,7 +233,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
-    unicode-emoji (4.1.0)
+    unicode-emoji (4.2.0)
     uri (1.0.4)
     useragent (0.16.11)
     websocket-driver (0.8.0)
@@ -239,8 +246,10 @@ PLATFORMS
   arm64-darwin
 
 DEPENDENCIES
-  config_for-data_model!
+  data_for!
+  minitest (~> 5.20)
   puma
+  rails (>= 6.1)
   rubocop-rails-omakase
   sqlite3
 
