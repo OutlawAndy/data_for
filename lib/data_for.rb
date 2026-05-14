@@ -1,6 +1,8 @@
-require "active_support/concern"
-require "active_support/core_ext/enumerable"
-require "data_for/version"
+# frozen_string_literal: true
+
+require 'active_support/concern'
+require 'active_support/core_ext/enumerable'
+require 'data_for/version'
 
 module DataFor
   class RecordNotFound < StandardError; end
@@ -47,7 +49,7 @@ module DataFor
 
       def find!(value)
         find(value) or raise RecordNotFound,
-          "Couldn't find #{name} with #{primary_key}=#{value.inspect}"
+                             "Couldn't find #{name} with #{primary_key}=#{value.inspect}"
       end
 
       def find_by(data)
@@ -56,7 +58,7 @@ module DataFor
 
       def find_by!(data)
         find_by(data) or raise RecordNotFound,
-          "Couldn't find #{name} matching #{data.inspect}"
+                               "Couldn't find #{name} matching #{data.inspect}"
       end
 
       def where(data)

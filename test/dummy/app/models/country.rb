@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 Country = Data.define(:id, :name, :states) do
   include DataFor::Model
+
   config :countries
 
   private
