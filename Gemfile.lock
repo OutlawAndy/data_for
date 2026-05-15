@@ -115,7 +115,9 @@ GEM
     marcel (1.1.0)
     mini_mime (1.1.5)
     mini_portile2 (2.8.9)
-    minitest (5.27.0)
+    minitest (6.0.6)
+      drb (~> 2.0)
+      prism (~> 1.5)
     net-imap (0.5.12)
       date
       net-protocol
@@ -248,7 +250,7 @@ PLATFORMS
 
 DEPENDENCIES
   data_for!
-  minitest (~> 5.20)
+  minitest (~> 6.0)
   puma
   rails (>= 6.1)
   rubocop-rails-omakase
